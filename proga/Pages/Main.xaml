@@ -1,0 +1,41 @@
+﻿<Page x:Class="proga.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:proga.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2168AE" Offset="0" />
+                <GradientStop Color="#FF16B5BD" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/ButtonRes.xaml" />
+        </Grid.Resources>
+        <Grid Margin="0,0,0,14">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="25" Direction="268" ShadowDepth="9" />
+            </Grid.Effect>
+            <Border Height="96" VerticalAlignment="Top">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF090909" Opacity="0.8" />
+                </Border.Background>
+            </Border>
+            <Image Source="logo.png" Margin="21, 15,0,0" HorizontalAlignment="Left" Width="59" Height="58" VerticalAlignment="Top" />
+            <Label Content="#XoчуПиццу" Margin="85,17,0,0" Foreground="White" FontSize="26" FontFamily="Yu Gothic UI Light" HorizontalAlignment="Left" Width="159" Height="44" VerticalAlignment="Top" />
+            <Button Style="{StaticResource MainBtnAnim}" Click="OpenMix" Content="Микс Х" Margin="0,7,10,0" HorizontalAlignment="Right" Width="167" Height="32" VerticalAlignment="Top" />
+            <Button Style="{StaticResource MainBtnAnim}" Click="OpenOrders" Content="Корзина" Margin="0,44,10,0" HorizontalAlignment="Right" Width="167" Height="32" VerticalAlignment="Top" />
+            <Button Style="{StaticResource MainBtnAnim}" Click="Exit" Content="Bыйти" Margin="0,7,182,0" HorizontalAlignment="Right" Width="138" Height="32" VerticalAlignment="Top" />
+        </Grid>
+        <ScrollViewer Margin="0,124,0,0">
+            <StackPanel x:Name="parrent">
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<Page x:Class="proga.Pages.End_Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:proga.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="End_Registration">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2168AE" Offset="0" />
+                <GradientStop Color="#FF16B5BD" Offset="1" />
+                <!--<GradientStop Color="#FFBD924B" Offset="0"/>
+            <GradientStop Color="#FF812F3D" Offset="1"/>-->
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/ButtonRes.xaml" />
+        </Grid.Resources>
+        <Grid Height="395" VerticalAlignment="Center" HorizontalAlignment="Center" Width="420" Margin="191,20,189,35">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="26" Direction="268" ShadowDepth="14" />
+            </Grid.Effect>
+            <Border CornerRadius="30,30,30,30">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF090909" Opacity="0.8" />
+                </Border.Background>
+            </Border>
+            <Image Source="logo.png" Margin="152,23,0,0" HorizontalAlignment="Left" Width="89" Height="88" VerticalAlignment="Top" />
+            <Label Content="#XочуПиццу" Margin="116,122,0,0" Foreground="White" FontSize="26" FontFamily="Yu Gothic UI Light" HorizontalAlignment="Left" Width="159" Height="44" VerticalAlignment="Top" />
+            <TextBlock Text="Поздравляем тебя! Теперь ты являешься пользователем нашей сети #ХочуПиццу и смело можешь заказывать пиццу на свой вкус прямо домой" TextWrapping="Wrap" Margin="22,166,0,0" Foreground="White" FontSize="16" FontFamily="Yu Gothic UI Light" TextAlignment="Center" HorizontalAlignment="Left" Width="376" Height="74" VerticalAlignment="Top" />
+            <TextBlock MouseDown="result_MouseDown" Text="(нажмите чтобы скопировать)" TextWrapping="Wrap" Margin="118,262,0,0" Foreground="White" FontSize="16" FontFamily="Yu Gothic UI Light" TextAlignment="Left" HorizontalAlignment="Left" Width="210" Height="28" VerticalAlignment="Top" />
+            <TextBlock MouseDown="result_MouseDown" Text="Baш пapoль и логин:" TextWrapping="Wrap" Margin="22,240,0,0" Foreground="White" FontSize="16" FontFamily="Yu Gothic UI Light" TextAlignment="Left" HorizontalAlignment="Left" Width="150" Height="28" VerticalAlignment="Top" />
+            <TextBlock x:Name="result" Text="" TextWrapping="Wrap" Margin="118,240,0,0" Foreground="White" FontSize="16" FontFamily="Yu Gothic UI Light" TextAlignment="Left" HorizontalAlignment="Left" Width="280" Height="28" VerticalAlignment="Top" MouseDown="result_MouseDown" />
+            <TextBlock Text="#Приятного аппетита! компания #XочуПиццу" TextWrapping="Wrap" Margin="186,295,0,0" Foreground="White" FontSize="16" FontFamily="Yu Gothic UI Light" TextAlignment="Center" HorizontalAlignment="Left" Width="224" Height="48" VerticalAlignment="Top" />
+            <Button Click="Menu" Style="{StaticResource MainBtnAnim}" Content="Meню" Margin="0,348,125,0" HorizontalAlignment="Right" Width="179" Height="32" VerticalAlignment="Top" />
+        </Grid>
+    </Grid>
+</Page>
